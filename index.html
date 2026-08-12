@@ -19,10 +19,7 @@
     }
     *{box-sizing:border-box}
     body{
-      margin:0;
-      min-height:100vh;
-      display:grid;
-      place-items:center;
+      margin:0; min-height:100vh; display:grid; place-items:center;
       color:var(--text);
       font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       background:
@@ -32,74 +29,39 @@
       padding:24px 16px;
     }
     body:before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      opacity:.08;
+      content:""; position:fixed; inset:0; pointer-events:none; opacity:.08;
       background-image:radial-gradient(circle,white 1px,transparent 1px);
       background-size:44px 44px;
       mask-image:linear-gradient(to bottom,black,transparent 80%);
     }
     .page{width:min(100%,500px);position:relative;z-index:1}
     .card{
-      padding:30px 18px 22px;
-      border:1px solid var(--line);
-      border-radius:30px;
+      padding:30px 18px 22px; border:1px solid var(--line); border-radius:30px;
       background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));
       box-shadow:0 24px 80px rgba(0,0,0,.48);
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
+      backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
     }
     .logo{
-      width:96px;height:96px;margin:0 auto 16px;
-      border-radius:50%;
-      display:grid;place-items:center;
+      width:96px;height:96px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;
       background:conic-gradient(from 220deg,var(--accent),var(--accent2),var(--accent));
       box-shadow:0 0 44px rgba(168,140,255,.28);
     }
-    .logo-inner{
-      width:80px;height:80px;border-radius:50%;
-      display:grid;place-items:center;
-      background:#090912;
-      font-size:25px;font-weight:800;letter-spacing:.08em;
-    }
+    .logo-inner{width:80px;height:80px;border-radius:50%;display:grid;place-items:center;background:#090912;font-size:25px;font-weight:800;letter-spacing:.08em}
     h1{margin:0;text-align:center;font-size:30px;letter-spacing:.02em}
     .tagline{text-align:center;color:var(--muted);margin:8px 0 4px;font-size:14px}
     .sub{text-align:center;color:#dedbea;margin:0 0 24px;font-size:13px}
-    .section-title{
-      margin:0 0 12px;
-      text-align:center;
-      font-size:13px;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      color:var(--accent2);
-      font-weight:800;
-    }
+    .section{margin-top:22px}
+    .section:first-of-type{margin-top:0}
+    .section-title{margin:0 0 12px;text-align:center;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);font-weight:800}
+    .release-title{text-align:center;margin:-2px 0 14px;color:#dedbea;font-size:13px}
     .links{display:grid;gap:12px}
     .link{
-      min-height:60px;
-      display:flex;align-items:center;gap:13px;
-      padding:12px 15px;
-      border:1px solid var(--line);
-      border-radius:18px;
-      color:var(--text);
-      text-decoration:none;
-      background:var(--panel);
-      transition:.2s ease;
+      min-height:60px;display:flex;align-items:center;gap:13px;padding:12px 15px;border:1px solid var(--line);border-radius:18px;
+      color:var(--text);text-decoration:none;background:var(--panel);transition:.2s ease;
     }
-    .link:hover,.link:focus-visible{
-      transform:translateY(-2px);
-      background:var(--panel-hover);
-      border-color:rgba(168,140,255,.55);
-      outline:none;
-    }
-    .icon{
-      width:38px;height:38px;flex:0 0 38px;
-      display:grid;place-items:center;
-      border-radius:12px;background:rgba(255,255,255,.08);
-      font-size:18px;
-    }
+    .link:hover,.link:focus-visible{transform:translateY(-2px);background:var(--panel-hover);border-color:rgba(168,140,255,.55);outline:none}
+    .icon{width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border-radius:12px;background:rgba(255,255,255,.08)}
+    .icon img{width:22px;height:22px;display:block;object-fit:contain}
     .label{flex:1;font-weight:750;font-size:15px}
     .arrow{font-size:20px;opacity:.55}
     footer{text-align:center;margin-top:17px;color:#908b9e;font-size:12px}
@@ -109,41 +71,61 @@
   <main class="page">
     <section class="card">
       <div class="logo"><div class="logo-inner">MV</div></div>
-
       <h1>MoodVerse</h1>
       <p class="tagline">Where Stories Become Music</p>
       <p class="sub">Human Stories • AI as a Tool</p>
 
-      <p class="section-title">Explore MoodVerse</p>
+      <section class="section">
+        <p class="section-title">Listen</p>
+        <p class="release-title">Persian party</p>
+        <nav class="links" aria-label="Listen to Persian party">
+          <a class="link" href="https://open.spotify.com/track/3ccdbpm1zVWsH29Z2FOzqn" target="_blank" rel="noopener">
+            <span class="icon"><img src="https://cdn.simpleicons.org/spotify/1ED760" alt="Spotify"></span><span class="label">Spotify</span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://geo.music.apple.com/au/album/persian-party-single/6796482463?app=music" target="_blank" rel="noopener">
+            <span class="icon"><img src="https://cdn.simpleicons.org/applemusic/FA243C" alt="Apple Music"></span><span class="label">Apple Music</span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://geo.itunes.apple.com/au/album/persian-party-single/6796482463?app=itunes" target="_blank" rel="noopener">
+            <span class="icon"><img src="https://cdn.simpleicons.org/itunes/FB5BC5" alt="iTunes"></span><span class="label">iTunes</span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://music.youtube.com/playlist?list=OLAK5uy_lJiYXaWSXy7tAcJwf8_eP5wZGCeYfVR3A" target="_blank" rel="noopener">
+            <span class="icon"><img src="https://cdn.simpleicons.org/youtubemusic/FF0000" alt="YouTube Music"></span><span class="label">YouTube Music</span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://music.amazon.com/albums/B0HCBJ8KTQ" target="_blank" rel="noopener">
+            <span class="icon"><img src="https://cdn.simpleicons.org/amazonmusic/25D1DA" alt="Amazon Music"></span><span class="label">Amazon Music</span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://tidal.com/track/548030790" target="_blank" rel="noopener">
+            <span class="icon"><img src="https://cdn.simpleicons.org/tidal/FFFFFF" alt="TIDAL"></span><span class="label">TIDAL</span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://soundcloud.com/moodverse/persian-party" target="_blank" rel="noopener">
+            <span class="icon"><img src="https://cdn.simpleicons.org/soundcloud/FF5500" alt="SoundCloud"></span><span class="label">SoundCloud</span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://www.pandora.com/TR%3A211088663" target="_blank" rel="noopener">
+            <span class="icon"><img src="https://cdn.simpleicons.org/pandora/224099" alt="Pandora"></span><span class="label">Pandora</span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://www.boomplay.com/albums/136989640" target="_blank" rel="noopener">
+            <span class="icon"><img src="https://cdn.simpleicons.org/boomplay/F39800" alt="Boomplay"></span><span class="label">Boomplay</span><span class="arrow">›</span>
+          </a>
+        </nav>
+      </section>
 
-      <nav class="links" aria-label="Official MoodVerse links">
-        <a class="link" href="https://www.youtube.com/@moodverse_ir" target="_blank" rel="noopener">
-          <span class="icon">▶</span>
-          <span class="label">YouTube</span>
-          <span class="arrow">›</span>
-        </a>
-
-        <a class="link" href="https://t.me/Moodverse_ir" target="_blank" rel="noopener">
-          <span class="icon">✈</span>
-          <span class="label">Telegram</span>
-          <span class="arrow">›</span>
-        </a>
-
-        <a class="link" href="https://www.instagram.com/moodverse_ir" target="_blank" rel="noopener">
-          <span class="icon">◎</span>
-          <span class="label">Instagram</span>
-          <span class="arrow">›</span>
-        </a>
-
-        <!-- بعداً می‌توانی دکمه‌های Spotify و Apple Music را اینجا اضافه کنی -->
-      </nav>
+      <section class="section">
+        <p class="section-title">Follow MoodVerse</p>
+        <nav class="links" aria-label="Official MoodVerse social links">
+          <a class="link" href="https://www.youtube.com/@moodverse_ir" target="_blank" rel="noopener">
+            <span class="icon"><img src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube"></span><span class="label">YouTube</span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://t.me/Moodverse_ir" target="_blank" rel="noopener">
+            <span class="icon"><img src="https://cdn.simpleicons.org/telegram/26A5E4" alt="Telegram"></span><span class="label">Telegram</span><span class="arrow">›</span>
+          </a>
+          <a class="link" href="https://www.instagram.com/moodverse_ir" target="_blank" rel="noopener">
+            <span class="icon"><img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram"></span><span class="label">Instagram</span><span class="arrow">›</span>
+          </a>
+        </nav>
+      </section>
     </section>
-
     <footer>© <span id="year"></span> MoodVerse</footer>
   </main>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
